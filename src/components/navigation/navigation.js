@@ -4,7 +4,7 @@ const Navigation = () => {
     return(
         <nav style = {{display: 'flex', justifyContent: 'flex-end'}}> 
         {/* its an object hence you have a key-value syntax */}
-            <p>Sign Out</p>
+            <p className= 'f3 link dim black underline pa3 pointer' >Sign Out</p>
         </nav>
     )
 }
