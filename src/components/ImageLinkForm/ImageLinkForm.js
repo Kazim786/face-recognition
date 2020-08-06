@@ -12,7 +12,7 @@ const ImageLinkForm = () => {
                 </div>
                 <div className = 'form center pa4 br3 shadow-5'>
                     <div className = 'p3'>
-                        <input className= 'f4 pa2 w-70 center' type= 'text' placeholder= 'Enter URL for the images'></input>
+                        <input className= 'f4 pa2 w-70 center' type= 'text' placeholder= 'Enter image URL'></input>
                         <div className = 'p3'>
                             <button className= 'w-40 grow f4 link ph3 pv2 dib white bg-light-green'>Detect!</button>
                         </div>
