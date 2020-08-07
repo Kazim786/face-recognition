@@ -19,7 +19,15 @@ const particlesOption = {
   }
 }
 
-function App() {
+class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      input: '',
+    }
+  }
+render (){
   return (
     <div className="App">
         <Particles className = 'particles'
@@ -34,5 +42,8 @@ function App() {
     </div>
   );
 }
+
+}
+  
 
 export default App;
