@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {Component} from 'react';
+
 import Particles from 'react-particles-js'
 import Navigation from './components/navigation/navigation'
 import Logo from './components/Logo/Logo'
@@ -27,6 +28,16 @@ class App extends Component {
       input: '',
     }
   }
+
+
+  onInputChange = (event) => {
+    console.log(event.target.value)
+  }
+
+  onButtonSubmit = () => {
+    console.log('click')
+  }
+
 render (){
   return (
     <div className="App">
@@ -35,7 +46,7 @@ render (){
       <Navigation />
       <Logo />
       <Rank />
-      <ImageLinkForm />
+      <ImageLinkForm onInputChange = {this.onInputChange} onButtonSubmit = {this.onButtonSubmit}/>
     {  /*<Logo />
       <ImageLinkForm />
     <FaceRecognition />*/}
