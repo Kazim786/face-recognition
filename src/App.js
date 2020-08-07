@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import FaceRecognition from './components/FaceRecognition/FaceRecognition'
 
 import Particles from 'react-particles-js'
 import Navigation from './components/navigation/navigation'
@@ -8,7 +9,6 @@ import Rank from './components/Rank/Rank'
 import './App.css';
 import Clarifai from 'clarifai'
 
-import FaceRecognition from './components/FaceRecognition/FaceRecognition'
 
 const app = new Clarifai.App({
   apiKey: 'd6b9f5b8523b4ee3967323cb1664dd11'
@@ -65,7 +65,6 @@ render (){
       <Logo />
       <Rank />
       <ImageLinkForm onInputChange = {this.onInputChange} onButtonSubmit = {this.onButtonSubmit}/>
-    
     <FaceRecognition />
     </div>
   );
