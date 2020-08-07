@@ -8,6 +8,8 @@ import Rank from './components/Rank/Rank'
 import './App.css';
 import Clarifai from 'clarifai'
 
+import FaceRecognition from './components/FaceRecognition/FaceRecognition'
+
 const app = new Clarifai.App({
   apiKey: 'd6b9f5b8523b4ee3967323cb1664dd11'
  });
@@ -41,7 +43,9 @@ class App extends Component {
 
   onButtonSubmit = () => {
     console.log('click')
-    app.models.predict("d6b9f5b8523b4ee3967323cb1664dd11", "https://samples.clarifai.com/face-det.jpg").then(
+    app.models.predict(
+      "d6b9f5b8523b4ee3967323cb1664dd11", 
+      "https://samples.clarifai.com/face-det.jpg").then(
     function(response) {
       // do something with response
       console.log(response)
@@ -61,9 +65,8 @@ render (){
       <Logo />
       <Rank />
       <ImageLinkForm onInputChange = {this.onInputChange} onButtonSubmit = {this.onButtonSubmit}/>
-    {  /*<Logo />
-      <ImageLinkForm />
-    <FaceRecognition />*/}
+    
+    <FaceRecognition />
     </div>
   );
 }
